@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin-top: 200px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            border: 0;
+            background-color: #FF5B22;
+            color: white;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #FB8B24;
+        }
+    </style>
+    <title>JSX-1</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script type="text/babel">
+        function App () {
+        
+            function alertHello() {
+                alert("Hello");
+            }
+             
+          return (
+            <>
+            <p>React is a javascript library</p>
+            <div className ="main">
+                <p>Click the below button to alert 'Hello</p>
+                <button onClick={alertHello}>Alert Hello</button>
+            </div>
+            </>
+          );
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+    </script>
+</body>
+</html>
